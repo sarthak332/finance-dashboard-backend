@@ -128,4 +128,10 @@ npm run dev
 * Rate limiting
 * Refresh tokens
 
+## 📮 Postman Collection
+
+You can test all APIs using the Postman collection:
+
+docs/postman_collection.json
+
 ---
