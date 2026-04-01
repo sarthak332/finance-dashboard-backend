@@ -2,252 +2,20 @@
   "info": {
     "_postman_id": "e08ee418-c8d4-426c-9d9a-62f471ee5cf4",
     "name": "Finance API",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "46762267"
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
-  "item": [
+  "variable": [
     {
-      "name": "http://localhost:5000/api/auth/login",
-      "request": {
-        "auth": {
-          "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2QwOTlkNWNlYWExZDZiMjhkOTk0YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTA0NTI5MywiZXhwIjoxNzc1MTMxNjkzfQ.UNA1d_l126M5jk-r9KlDGIwI36IPfHshNkGHjA4ml6c",
-              "type": "string"
-            }
-          ]
-        },
-        "method": "POST",
-        "header": [
-          {
-            "key": "",
-            "value": "",
-            "type": "text",
-            "disabled": true
-          },
-          {
-            "key": "Authorization",
-            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2QwOTlkNWNlYWExZDZiMjhkOTk0YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTA0NTI5MywiZXhwIjoxNzc1MTMxNjkzfQ.UNA1d_l126M5jk-r9KlDGIwI36IPfHshNkGHjA4ml6c",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"email\": \"admin@test.com\",\r\n  \"password\": \"123456\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:5000/api/auth/login",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "auth",
-            "login"
-          ]
-        }
-      },
-      "response": []
+      "key": "base_url",
+      "value": "https://finance-dashboard-backend-rqxq.onrender.com"
     },
     {
-      "name": "http://localhost:5000/api/auth/register",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"name\": \"Admin User\",\r\n  \"email\": \"admin@test.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"admin\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:5000/api/auth/register",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "auth",
-            "register"
-          ]
-        }
-      },
-      "response": []
+      "key": "token",
+      "value": ""
     },
     {
-      "name": "http://localhost:5000/api/records",
-      "request": {
-        "auth": {
-          "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2QwOTlkNWNlYWExZDZiMjhkOTk0YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTA0NTI5MywiZXhwIjoxNzc1MTMxNjkzfQ.UNA1d_l126M5jk-r9KlDGIwI36IPfHshNkGHjA4ml6c",
-              "type": "string"
-            }
-          ]
-        },
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:5000/api/records",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "records"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/records",
-      "request": {
-        "auth": {
-          "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2QwOTlkNWNlYWExZDZiMjhkOTk0YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTA0NTI5MywiZXhwIjoxNzc1MTMxNjkzfQ.UNA1d_l126M5jk-r9KlDGIwI36IPfHshNkGHjA4ml6c",
-              "type": "string"
-            }
-          ]
-        },
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"amount\": 500,\r\n  \"type\": \"expense\",\r\n  \"category\": \"food\",\r\n  \"notes\": \"Dinner\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:5000/api/records",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "records"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/records?type=expense",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/records?category=food",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/dashboard/summary",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/dashboard/categories",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/dashboard/recent",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/dashboard/trends",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/users",
-      "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
-    },
-    {
-      "name": "http://localhost:5000/api/users/:id",
-      "request": {
-        "method": "PATCH",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"role\": \"analyst\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:5000/api/users/:id",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "5000",
-          "path": [
-            "api",
-            "users",
-            ":id"
-          ],
-          "variable": [
-            {
-              "key": "id",
-              "value": "69cd099d5ceaa1d6b28d994b"
-            }
-          ]
-        }
-      },
-      "response": []
+      "key": "userId",
+      "value": ""
     }
   ],
   "auth": {
@@ -255,32 +23,156 @@
     "bearer": [
       {
         "key": "token",
-        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5Y2QwOTlkNWNlYWExZDZiMjhkOTk0YiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTA0NTI5MywiZXhwIjoxNzc1MTMxNjkzfQ.UNA1d_l126M5jk-r9KlDGIwI36IPfHshNkGHjA4ml6c",
+        "value": "{{token}}",
         "type": "string"
       }
     ]
   },
-  "event": [
+  "item": [
     {
-      "listen": "prerequest",
-      "script": {
-        "type": "text/javascript",
-        "packages": {},
-        "requests": {},
-        "exec": [
-          ""
-        ]
+      "name": "Auth - Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Admin User\",\n  \"email\": \"admin@test.com\",\n  \"password\": \"123456\",\n  \"role\": \"admin\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register"
+        }
       }
     },
     {
-      "listen": "test",
-      "script": {
-        "type": "text/javascript",
-        "packages": {},
-        "requests": {},
-        "exec": [
-          ""
-        ]
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@test.com\",\n  \"password\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/login"
+        }
+      }
+    },
+    {
+      "name": "Records - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/records"
+        }
+      }
+    },
+    {
+      "name": "Records - Create",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 500,\n  \"type\": \"expense\",\n  \"category\": \"food\",\n  \"notes\": \"Dinner\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/records"
+        }
+      }
+    },
+    {
+      "name": "Records - Filter by Type",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/records?type=expense"
+        }
+      }
+    },
+    {
+      "name": "Records - Filter by Category",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/records?category=food"
+        }
+      }
+    },
+    {
+      "name": "Dashboard - Summary",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/dashboard/summary"
+        }
+      }
+    },
+    {
+      "name": "Dashboard - Categories",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/dashboard/categories"
+        }
+      }
+    },
+    {
+      "name": "Dashboard - Recent",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/dashboard/recent"
+        }
+      }
+    },
+    {
+      "name": "Dashboard - Trends",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/dashboard/trends"
+        }
+      }
+    },
+    {
+      "name": "Users - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/api/users"
+        }
+      }
+    },
+    {
+      "name": "Users - Update Role",
+      "request": {
+        "method": "PATCH",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"role\": \"analyst\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/{{userId}}"
+        }
       }
     }
   ]
