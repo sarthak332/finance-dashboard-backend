@@ -133,5 +133,7 @@ npm run dev
 You can test all APIs using the Postman collection:
 
 docs/postman_collection.json
+The collection is configured with deployed API base URL:
+https://finance-dashboard-backend.onrender.com
 
 ---
